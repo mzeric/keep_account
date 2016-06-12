@@ -24,3 +24,5 @@ cd keep_account
 ./manage.py runserver
 
 ```
+
+Any questions refer to [FAQ]()
