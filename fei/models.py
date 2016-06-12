@@ -14,10 +14,10 @@ class Ren(models.Model):
 
 
 class ChiFan(models.Model):
-    addr = models.CharField(max_length=50)
+    addr = models.CharField(max_length=50,blank=True)
     date = models.DateTimeField(_("Date"), default = timezone.now)
     ren = models.ManyToManyField(Ren)
-    comment = models.CharField(max_length=1024)
+    comment = models.CharField(max_length=1024,blank=True)
     cost_sharing = models.FloatField(default=0.0)
     total = models.FloatField(default=0.0)
 
@@ -28,7 +28,7 @@ class ChiFan_Sep(models.Model):
     ren = models.ForeignKey(Ren)
     cost = models.FloatField()
     chifan = models.ForeignKey(ChiFan)
-    comment = models.CharField(max_length=1024)
+    comment = models.CharField(max_length=1024, blank=True)
 
 class Charge(models.Model):
     ren = models.ForeignKey(Ren)

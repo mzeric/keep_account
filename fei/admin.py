@@ -3,7 +3,8 @@ from django.contrib import admin
 # Register your models here.
 from fei.models import *
 
-t_balance= 0
+from django.conf.locale.en import formats as en_formats
+en_formats.DATETIME_FORMAT = "Y-m-d H:i:s"
 
 def get_balance_with_total(ren, fan):
     pass
